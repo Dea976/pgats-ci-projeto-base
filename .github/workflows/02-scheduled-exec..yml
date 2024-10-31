@@ -20,7 +20,7 @@ jobs:
     # passo a passo das acoes do job
     steps:
     
-      -uses: actions/checkout@v4ith
+      - uses: actions/checkout@v4ith
 
       # - uses: actions/setup-node@v4
       #   with:
