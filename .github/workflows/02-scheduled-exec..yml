@@ -11,7 +11,7 @@ on:
 
 
 jobs:  
-  # descrição do job
+  # descfrição do job
   e2e-tests:    
     
     #maquina que o job vai executar
