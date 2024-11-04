@@ -20,11 +20,12 @@ jobs:
     
     #maquina que o job vai executar
     runs-on: ['ubuntu-latest']
+    if: ${{ GitHub.event.workflow_run.conclusion = 'sucess' }}
 
     # passo a passo das acoes do job
     steps:
     
-      - uses: actions/checkout@v4ith
+      - uses: actions/checkout@v4
 
       # - uses: actions/setup-node@v4
       #   with:
