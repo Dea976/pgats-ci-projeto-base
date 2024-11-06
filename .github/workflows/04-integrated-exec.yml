@@ -34,7 +34,20 @@ jobs:
       - name: Padronizacao de código (Lint)
         run: yarn lint  
 
+  unit:
+    runs-on: ubuntu-latest
 
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalando Yarn
+        run: npm install -g yarn 
+
+      - name: Instalando dependências
+        run: yarn   
+      
+      - name: Testes de Unidade
+        run: yarn run test  
 
 
   # descrição do job
@@ -56,6 +69,7 @@ jobs:
       
       - name: Padronização de codigo (Lint)  
 
+
       # - uses: actions/setup-node@v4
       #   with:
       #     node-version: lts/*
@@ -72,7 +86,7 @@ jobs:
       - name: Testes E2E (end-to-end)
         run: yarn run e2e
 
-     #passed, failed, cancelled
+      #passed, failed, cancelled
       - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
