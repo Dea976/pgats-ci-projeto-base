@@ -2,8 +2,8 @@
 
 name: 'Execução por Deploy'
 
-#triggers ou gatilhos de execução
- # gatilho de exec após outro workflow = workflow_run 
+# triggers ou gatilhos de execução
+# gatilho de exec após outro workflow = workflow_run 
 
 # qdo executar completamente a Execucao Manual e que vai disparar a execucao 
 on:
@@ -11,8 +11,6 @@ on:
     workflows: ['Execução Manual']
     types:
       -completed
-
-
 
 jobs:  
   # descrição do job
